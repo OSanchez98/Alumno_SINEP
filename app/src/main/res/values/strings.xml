@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App_alumno</string>
+    <string name="login_sinep">Login SINEP</string>
+    <string name="matricula">Matricula</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="button">Button</string>
+    <string name="todo">TODO</string>
+</resources>
