@@ -6,39 +6,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/login_sinep"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="163dp"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
 
-    <EditText
-        android:id="@+id/txtMat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/matricula"
-        android:inputType="number"
-        android:paddingTop="10dp" />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_work_black_24dp"/>
 
-    <Button
-        android:id="@+id/btLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/button" />
+            <TextView
+                android:id="@+id/titleSINEP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SINEP"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/titleSINEP2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sistema de Integración Empresarial para Practicantes"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="85dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtMat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_mood_black_24dp"
+                android:textColor="@color/colorTextMatricula"
+                android:hint="Matrícula"
+                android:maxLength="9"
+                android:textColorHint="@color/colorWhite"
+                android:inputType="number"
+                android:textSize="26sp"
+                android:drawablePadding="20dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+               />
+
+
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Entrale"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorRed"/>
+
+            <TextView
+                android:id="@+id/txtLeyenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorGray"
+                android:text="Tu matrícla debe estar habilitada"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/txtQueOnda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_horizontal"
+                android:text="¡qué onda!"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--
+           <TextView
+               android:id="@+id/textView"
+               android:layout_width="wrap_content"
+               android:layout_height="91dp"
+               android:layout_marginBottom="60dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/logo_sinep_login"
+               android:gravity="center"
+               android:text="SINEP"
+               android:textColor="@android:color/background_light"
+               android:textSize="48dp"
+               app:layout_constraintBottom_toTopOf="@+id/txtMat"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent" />
+
+           <EditText
+               android:id="@+id/txtMat"
+               android:layout_width="243dp"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="8dp"
+               android:layout_marginStart="8dp"
+               android:ems="10"
+               android:hint="Matrícula"
+               android:inputType="number"
+               android:paddingTop="10dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               tools:layout_editor_absoluteY="279dp"
+               tools:ignore="MissingConstraints" />
+
+           <Button
+               android:id="@+id/btLogin"
+               android:layout_width="150dp"
+               android:layout_height="48dp"
+               android:layout_marginBottom="8dp"
+               android:layout_marginTop="52dp"
+               android:text="Iniciar"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/txtMat"
+               app:layout_constraintVertical_bias="0.021"
+               tools:ignore="MissingConstraints"
+               tools:layout_editor_absoluteX="117dp" />
+   -->
 </LinearLayout>
