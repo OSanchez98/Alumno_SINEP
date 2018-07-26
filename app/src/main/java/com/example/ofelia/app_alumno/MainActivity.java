@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
                                 int r= objtJSON(res);
                                 if(r>0) //validamos si existe o no
                                 {
-                                    Intent i = new Intent(getApplicationContext(),principal.class);
+                                    Intent i = new Intent(MainActivity.this,DatoEmp.class);
+
                                     startActivity(i);
                                 }
                                 else
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         String respuesta="";
         try {
             //variable que almacena URL
-            URL url = new URL("http://localhost/WebService/ServicioVal.php");
+            URL url = new URL("http://192.168.1.2/WebService/ServicioVal.php");
             connection=(HttpURLConnection)url.openConnection();
             //metodo de envio de datos
             connection.setRequestMethod("POST");

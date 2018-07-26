@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".principal" />
-        <activity android:name=".fechas"></activity>
+        <activity android:name=".fechas" />
+        <activity android:name=".DatoEmp"></activity>
     </application>
 
 </manifest>
